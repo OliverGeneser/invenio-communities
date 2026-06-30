@@ -1,10 +1,10 @@
+import { createRoot } from "react-dom/client";
 /*
  * SPDX-FileCopyrightText: 2022 CERN.
  * SPDX-License-Identifier: MIT
  */
 
 import React from "react";
-import ReactDOM from "react-dom";
 import FeaturedCommunities from "./FeaturedCommunities";
 
 const featuredCommunitiesContainer = document.getElementById("communities-featured");
@@ -15,13 +15,12 @@ const computerColumnWidth = featuredCommunitiesContainer.dataset.computerColumnW
 const widescreenColumnWidth =
   featuredCommunitiesContainer.dataset.widescreenColumnWidth;
 
-ReactDOM.render(
-  <FeaturedCommunities
-    columnNumber={columnNumber}
-    mobileColumnWidth={mobileColumnWidth}
-    computerColumnWidth={computerColumnWidth}
-    tabletColumnWidth={tabletColumnWidth}
-    widescreenColumnWidth={widescreenColumnWidth}
-  />,
-  featuredCommunitiesContainer
-);
+const root = createRoot(featuredCommunitiesContainer);
+
+root.render(<FeaturedCommunities
+  columnNumber={columnNumber}
+  mobileColumnWidth={mobileColumnWidth}
+  computerColumnWidth={computerColumnWidth}
+  tabletColumnWidth={tabletColumnWidth}
+  widescreenColumnWidth={widescreenColumnWidth}
+/>);

@@ -1,3 +1,4 @@
+import { createRoot } from "react-dom/client";
 /*
  * SPDX-FileCopyrightText: 2016-2023 CERN.
  * SPDX-FileCopyrightText: 2021-2022 Northwestern University.
@@ -5,7 +6,6 @@
  */
 
 import React from "react";
-import ReactDOM from "react-dom";
 import { default as CommunityProfileForm } from "./CommunityProfileForm";
 import { OverridableContext, overrideStore } from "react-overridable";
 
@@ -18,17 +18,16 @@ const customFields = JSON.parse(domContainer.dataset.customFields);
 const permissions = JSON.parse(domContainer.dataset.permissions);
 const overriddenComponents = overrideStore.getAll();
 
-ReactDOM.render(
-  <OverridableContext.Provider value={overriddenComponents}>
-    <CommunityProfileForm
-      community={community}
-      hasLogo={hasLogo}
-      defaultLogo="/static/images/square-placeholder.png"
-      types={types}
-      logoMaxSize={logoMaxSize}
-      customFields={customFields}
-      permissions={permissions}
-    />
-  </OverridableContext.Provider>,
-  domContainer
-);
+const root = createRoot(domContainer);
+
+root.render(<OverridableContext.Provider value={overriddenComponents}>
+  <CommunityProfileForm
+    community={community}
+    hasLogo={hasLogo}
+    defaultLogo="/static/images/square-placeholder.png"
+    types={types}
+    logoMaxSize={logoMaxSize}
+    customFields={customFields}
+    permissions={permissions}
+  />
+</OverridableContext.Provider>);

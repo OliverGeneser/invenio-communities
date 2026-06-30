@@ -1,3 +1,4 @@
+import { createRoot } from "react-dom/client";
 /*
  * SPDX-FileCopyrightText: 2016-2024 CERN.
  * SPDX-FileCopyrightText: 2021-2022 Northwestern University.
@@ -9,7 +10,6 @@ import { Formik, useFormikContext } from "formik";
 import _isEmpty from "lodash/isEmpty";
 import _get from "lodash/get";
 import React, { Component } from "react";
-import ReactDOM from "react-dom";
 import {
   CustomFields,
   FieldLabel,
@@ -221,12 +221,12 @@ const formConfig = JSON.parse(domContainer.dataset.formConfig);
 const customFields = JSON.parse(domContainer.dataset.customFields);
 const canCreateRestricted = JSON.parse(domContainer.dataset.canCreateRestricted);
 
-ReactDOM.render(
-  <CommunityCreateForm
-    formConfig={formConfig}
-    customFields={customFields}
-    canCreateRestricted={canCreateRestricted}
-  />,
-  domContainer
-);
+const root = createRoot(domContainer);
+
+root.render(<CommunityCreateForm
+  formConfig={formConfig}
+  customFields={customFields}
+  canCreateRestricted={canCreateRestricted}
+/>);
+
 export default CommunityCreateForm;

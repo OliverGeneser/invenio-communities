@@ -5,7 +5,7 @@
 
 import { FeatureModal } from "./FeatureModal";
 import React from "react";
-import ReactDOM from "react-dom";
+import { createRoot } from "react-dom/client";
 import _get from "lodash/get";
 import { OverridableContext, parametrize } from "react-overridable";
 import { FeaturedEntries } from "./featured";
@@ -46,7 +46,7 @@ const overridenComponents = {
 };
 
 domContainer &&
-  ReactDOM.render(
+  createRoot(domContainer).render(
     <OverridableContext.Provider value={overridenComponents}>
       <AdminDetailsView
         title={title}
@@ -65,6 +65,5 @@ domContainer &&
       >
         <FeaturedEntries />
       </AdminDetailsView>
-    </OverridableContext.Provider>,
-    domContainer
+    </OverridableContext.Provider>
   );
