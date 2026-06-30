@@ -1,3 +1,4 @@
+import { createRoot } from "react-dom/client";
 /*
  * SPDX-FileCopyrightText: 2024 CERN.
  * SPDX-License-Identifier: MIT
@@ -9,7 +10,6 @@ import _get from "lodash/get";
 import _isEmpty from "lodash/isEmpty";
 import PropTypes from "prop-types";
 import React, { Component } from "react";
-import ReactDOM from "react-dom";
 import {
   FieldLabel,
   RadioField,
@@ -331,14 +331,14 @@ const canCreateRestricted = JSON.parse(domContainer.dataset.canCreateRestricted)
 const community = JSON.parse(domContainer.dataset.community);
 
 const overriddenComponents = overrideStore.getAll();
-ReactDOM.render(
-  <OverridableContext.Provider value={overriddenComponents}>
-    <CommunityCreateForm
-      formConfig={formConfig}
-      canCreateRestricted={canCreateRestricted}
-      community={community}
-    />
-  </OverridableContext.Provider>,
-  domContainer
-);
+const root = createRoot(domContainer);
+
+root.render(<OverridableContext.Provider value={overriddenComponents}>
+  <CommunityCreateForm
+    formConfig={formConfig}
+    canCreateRestricted={canCreateRestricted}
+    community={community}
+  />
+</OverridableContext.Provider>);
+
 export default CommunityCreateForm;

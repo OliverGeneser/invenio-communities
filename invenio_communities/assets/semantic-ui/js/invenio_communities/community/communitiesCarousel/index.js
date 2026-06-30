@@ -1,3 +1,4 @@
+import { createRoot } from "react-dom/client";
 /*
  * SPDX-FileCopyrightText: 2016-2024 CERN.
  * SPDX-FileCopyrightText: 2024 KTH Royal Institute of Technology.
@@ -5,7 +6,6 @@
  */
 
 import React from "react";
-import ReactDOM from "react-dom";
 import { OverridableContext, overrideStore } from "react-overridable";
 import CommunitiesCarousel from "./CommunitiesCarousel";
 
@@ -20,17 +20,16 @@ const showUploadBtn = JSON.parse(communitiesCarouselContainer.dataset.showUpload
 
 const overriddenComponents = overrideStore.getAll();
 
-ReactDOM.render(
-  <OverridableContext.Provider value={overriddenComponents}>
-    <CommunitiesCarousel
-      title={title}
-      fetchUrl={fetchUrl}
-      intervalDelay={intervalDelay}
-      animationSpeed={animationSpeed}
-      defaultLogo={defaultLogo}
-      itemsPerPage={itemsPerPage}
-      showUploadBtn={showUploadBtn}
-    />
-  </OverridableContext.Provider>,
-  communitiesCarouselContainer
-);
+const root = createRoot(communitiesCarouselContainer);
+
+root.render(<OverridableContext.Provider value={overriddenComponents}>
+  <CommunitiesCarousel
+    title={title}
+    fetchUrl={fetchUrl}
+    intervalDelay={intervalDelay}
+    animationSpeed={animationSpeed}
+    defaultLogo={defaultLogo}
+    itemsPerPage={itemsPerPage}
+    showUploadBtn={showUploadBtn}
+  />
+</OverridableContext.Provider>);
