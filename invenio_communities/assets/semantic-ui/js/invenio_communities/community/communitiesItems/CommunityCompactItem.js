@@ -9,15 +9,16 @@ import PropTypes from "prop-types";
 import { CommunityCompactItemComputer } from "./CommunityCompactItemComputer";
 import { CommunityCompactItemMobile } from "./CommunityCompactItemMobile";
 
+const communityCompactItemDefaultPropRecordRequests = {};
 export function CommunityCompactItem({
   result,
-  actions,
-  extraLabels,
-  itemClassName,
-  showPermissionLabel,
-  detailUrl,
+  actions = undefined,
+  extraLabels = undefined,
+  itemClassName = "",
+  showPermissionLabel = false,
+  detailUrl = undefined,
   isCommunityDefault,
-  recordRequests,
+  recordRequests = communityCompactItemDefaultPropRecordRequests,
 }) {
   return (
     <>
@@ -56,11 +57,3 @@ CommunityCompactItem.propTypes = {
   recordRequests: PropTypes.object,
 };
 
-CommunityCompactItem.defaultProps = {
-  actions: undefined,
-  extraLabels: undefined,
-  itemClassName: "",
-  showPermissionLabel: false,
-  detailUrl: undefined,
-  recordRequests: {},
-};

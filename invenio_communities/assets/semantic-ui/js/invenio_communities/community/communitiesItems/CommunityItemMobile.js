@@ -13,7 +13,7 @@ import { Button, Grid, Icon, Popup, Header } from "semantic-ui-react";
 import PropTypes from "prop-types";
 import OrganizationsList from "../../organizations/OrganizationsList";
 
-export const CommunityItemMobile = ({ result, index }) => {
+export const CommunityItemMobile = ({ result, index = null }) => {
   const communityType = result.ui?.type?.title_l10n;
   const canUpdate = result.ui.permissions.can_update;
   return (
@@ -138,6 +138,3 @@ CommunityItemMobile.propTypes = {
   index: PropTypes.string,
 };
 
-CommunityItemMobile.defaultProps = {
-  index: null,
-};

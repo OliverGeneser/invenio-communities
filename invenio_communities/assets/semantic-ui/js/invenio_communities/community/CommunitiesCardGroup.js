@@ -11,7 +11,7 @@ import { Card, Grid, Message, Placeholder } from "semantic-ui-react";
 import { http } from "react-invenio-forms";
 import PropTypes from "prop-types";
 
-const PlaceholderLoader = ({ size, isLoading, children, ...props }) => {
+const PlaceholderLoader = ({ size = 5, isLoading, children, ...props }) => {
   const PlaceholderItem = () => (
     <Grid.Column width={3}>
       <Placeholder>
@@ -44,10 +44,6 @@ PlaceholderLoader.propTypes = {
   size: PropTypes.number,
   isLoading: PropTypes.bool.isRequired,
   children: PropTypes.node.isRequired,
-};
-
-PlaceholderLoader.defaultProps = {
-  size: 5,
 };
 
 const EmptyMessage = ({ message }) => {

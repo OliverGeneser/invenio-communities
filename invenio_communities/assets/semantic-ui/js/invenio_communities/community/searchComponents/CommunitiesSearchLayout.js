@@ -15,7 +15,7 @@ import { GridResponsiveSidebarColumn } from "react-invenio-forms";
 import { SearchBar, Sort } from "react-searchkit";
 import { Button, Container, Grid } from "semantic-ui-react";
 
-export const CommunitiesSearchLayout = ({ config, appName }) => {
+export const CommunitiesSearchLayout = ({ config, appName = "" }) => {
   const [sidebarVisible, setSidebarVisible] = React.useState(false);
   return (
     <Container>
@@ -98,6 +98,3 @@ CommunitiesSearchLayout.propTypes = {
   appName: PropTypes.string,
 };
 
-CommunitiesSearchLayout.defaultProps = {
-  appName: "",
-};

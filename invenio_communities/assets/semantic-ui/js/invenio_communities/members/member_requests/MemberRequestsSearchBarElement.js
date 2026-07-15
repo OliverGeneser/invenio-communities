@@ -14,9 +14,9 @@ export const MemberRequestsSearchBarElement = ({
   onInputChange,
   onKeyPress,
   queryString,
-  uiProps,
-  className,
-  placeholder,
+  uiProps = null,
+  className = "",
+  placeholder = "",
 }) => {
   return (
     <Input
@@ -49,8 +49,3 @@ MemberRequestsSearchBarElement.propTypes = {
   placeholder: PropTypes.string,
 };
 
-MemberRequestsSearchBarElement.defaultProps = {
-  uiProps: null,
-  className: "",
-  placeholder: "",
-};

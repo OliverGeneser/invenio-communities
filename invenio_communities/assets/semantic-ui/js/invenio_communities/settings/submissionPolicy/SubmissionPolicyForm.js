@@ -12,7 +12,7 @@ import { RadioField } from "react-invenio-forms";
 import { Header } from "semantic-ui-react";
 import PropTypes from "prop-types";
 
-const ReviewPolicyField = ({ label, formConfig, ...props }) => {
+const ReviewPolicyField = ({ label = "", formConfig, ...props }) => {
   const [field] = useField(props);
   return (
     <>
@@ -39,11 +39,7 @@ ReviewPolicyField.propTypes = {
   formConfig: PropTypes.object.isRequired,
 };
 
-ReviewPolicyField.defaultProps = {
-  label: "",
-};
-
-const RecordSubmissionPolicyField = ({ label, formConfig, ...props }) => {
+const RecordSubmissionPolicyField = ({ label = "", formConfig, ...props }) => {
   const [field] = useField(props);
   const fieldPath = "access.record_submission_policy";
   const { record_submission_policy: subPolicy } = formConfig.access;
@@ -69,10 +65,6 @@ const RecordSubmissionPolicyField = ({ label, formConfig, ...props }) => {
 RecordSubmissionPolicyField.propTypes = {
   label: PropTypes.string,
   formConfig: PropTypes.object.isRequired,
-};
-
-RecordSubmissionPolicyField.defaultProps = {
-  label: "",
 };
 
 class SubmissionPolicyForm extends Component {

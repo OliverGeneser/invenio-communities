@@ -14,7 +14,7 @@ import { RadioField } from "react-invenio-forms";
 import { Header } from "semantic-ui-react";
 import PropTypes from "prop-types";
 
-const VisibilityField = ({ label, formConfig, ...props }) => {
+const VisibilityField = ({ label = "", formConfig, ...props }) => {
   const [field] = useField(props);
   const fieldPath = "access.visibility";
 
@@ -54,11 +54,7 @@ VisibilityField.propTypes = {
   formConfig: PropTypes.object.isRequired,
 };
 
-VisibilityField.defaultProps = {
-  label: "",
-};
-
-const MembersVisibilityField = ({ label, formConfig, ...props }) => {
+const MembersVisibilityField = ({ label = "", formConfig, ...props }) => {
   const [field] = useField(props);
   return (
     <>
@@ -84,11 +80,7 @@ MembersVisibilityField.propTypes = {
   formConfig: PropTypes.object.isRequired,
 };
 
-MembersVisibilityField.defaultProps = {
-  label: "",
-};
-
-const MemberPolicyField = ({ label, formConfig, ...props }) => {
+const MemberPolicyField = ({ label = "", formConfig, ...props }) => {
   const [field] = useField(props);
   const isDisabled = _get(field.value, "access.visibility") === "restricted";
 
@@ -115,10 +107,6 @@ const MemberPolicyField = ({ label, formConfig, ...props }) => {
 MemberPolicyField.propTypes = {
   label: PropTypes.string,
   formConfig: PropTypes.object.isRequired,
-};
-
-MemberPolicyField.defaultProps = {
-  label: "",
 };
 
 class CommunityPrivilegesForm extends Component {

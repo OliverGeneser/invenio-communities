@@ -12,15 +12,16 @@ import { Image, InvenioPopup } from "react-invenio-forms";
 import { Icon, Label, Item, Popup } from "semantic-ui-react";
 import { RestrictedLabel } from "../labels";
 
+const communityCompactItemComputerDefaultPropRecordRequests = {};
 export const CommunityCompactItemComputer = ({
   result,
-  actions,
-  extraLabels,
-  itemClassName,
-  showPermissionLabel,
-  detailUrl,
+  actions = undefined,
+  extraLabels = undefined,
+  itemClassName = "",
+  showPermissionLabel = false,
+  detailUrl = undefined,
   isCommunityDefault,
-  recordRequests,
+  recordRequests = communityCompactItemComputerDefaultPropRecordRequests,
 }) => {
   const { metadata, ui, links, access, id } = result;
   const viewComments = id in recordRequests;
@@ -132,11 +133,3 @@ CommunityCompactItemComputer.propTypes = {
   recordRequests: PropTypes.object,
 };
 
-CommunityCompactItemComputer.defaultProps = {
-  actions: undefined,
-  extraLabels: undefined,
-  itemClassName: "",
-  showPermissionLabel: false,
-  detailUrl: undefined,
-  recordRequests: {},
-};
