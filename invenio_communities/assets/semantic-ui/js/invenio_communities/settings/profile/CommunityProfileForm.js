@@ -134,6 +134,8 @@ class CommunityProfileForm extends Component {
      */
     const deserializeFunding = (fund) => {
       const _deserialize = (value) => {
+        if (!value) return value;
+
         const deserializedValue = _cloneDeep(value);
 
         if (value?.title_l10n) {
@@ -171,7 +173,7 @@ class CommunityProfileForm extends Component {
       return deserializedValue;
     };
 
-    const funding = initialValues.ui.funding?.map((fund) => {
+    const funding = initialValues.ui?.funding?.map((fund) => {
       return {
         ...(fund.award && { award: deserializeFunding(fund.award) }),
         funder: deserializeFunding(fund.funder),

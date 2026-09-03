@@ -45,7 +45,7 @@ communities = WebpackThemeBundle(
             dependencies={
                 "@semantic-ui-react/css-patch": "^1.0.0",
                 "react-router-dom": "^6.3.0",
-                "react-invenio-forms": "../../../../../react-invenio-forms",
+                "react-invenio-forms": "^5.0.0-alpha.2",
                 "axios": "^1.7.7",
                 "formik": "^2.4.9",
                 "i18next": "^20.3.0",
@@ -60,7 +60,7 @@ communities = WebpackThemeBundle(
                 "react-dom": "^18.3.1",
                 "react-i18next": "^11.11.0",
                 "react-redux": "^7.2.0",
-                "react-searchkit": "../../../../../react-searchkit",
+                "react-searchkit": "^4.0.0-alpha.2",
                 "redux": "^4.0.0",
                 "redux-thunk": "^2.3.0",
                 "semantic-ui-css": "^2.5.0",
