@@ -4,7 +4,6 @@ import { createRoot } from "react-dom/client";
  * SPDX-License-Identifier: MIT
  */
 
-import React from "react";
 import FeaturedCommunities from "./FeaturedCommunities";
 
 const featuredCommunitiesContainer = document.getElementById("communities-featured");

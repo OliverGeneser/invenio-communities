@@ -9,7 +9,7 @@ import { i18next } from "@translations/invenio_communities/i18next";
 import { Formik, useFormikContext } from "formik";
 import _isEmpty from "lodash/isEmpty";
 import _get from "lodash/get";
-import React, { Component } from "react";
+import { Component, Fragment } from "react";
 import {
   CustomFields,
   FieldLabel,
@@ -165,7 +165,7 @@ class CommunityCreateForm extends Component {
                     <>
                       <Header as="h3">{i18next.t("Community visibility")}</Header>
                       {formConfig.access.visibility.map((item) => (
-                        <React.Fragment key={item.value}>
+                        <Fragment key={item.value}>
                           <RadioField
                             key={item.value}
                             fieldPath="access.visibility"
@@ -181,7 +181,7 @@ class CommunityCreateForm extends Component {
                             }}
                           />
                           <label className="helptext">{item.helpText}</label>
-                        </React.Fragment>
+                        </Fragment>
                       ))}
                     </>
                   )}

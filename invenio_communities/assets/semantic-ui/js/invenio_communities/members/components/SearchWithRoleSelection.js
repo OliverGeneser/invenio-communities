@@ -8,7 +8,7 @@ import { RadioSelection } from "@js/invenio_communities/members/components/bulk_
 import { ErrorMessage } from "@js/invenio_communities/members/components/ErrorMessage";
 import { i18next } from "@translations/invenio_communities/i18next";
 import PropTypes from "prop-types";
-import React, { Component } from "react";
+import { Component } from "react";
 import { Button, Form, Modal } from "semantic-ui-react";
 import { MembersSearchBar } from "../invitations/invitationsModal/MemberSearchBar";
 import { SelectedMembers } from "./bulk_actions/SelectedMembers";

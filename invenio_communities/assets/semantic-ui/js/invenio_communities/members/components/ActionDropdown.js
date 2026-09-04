@@ -4,7 +4,7 @@
  */
 
 import PropTypes from "prop-types";
-import React, { Component } from "react";
+import { Component } from "react";
 import { withCancel } from "react-invenio-forms";
 import Overridable from "react-overridable";
 import { Dropdown, List } from "semantic-ui-react";

@@ -5,7 +5,7 @@
 
 import { i18next } from "@translations/invenio_communities/i18next";
 import PropTypes from "prop-types";
-import React, { Component } from "react";
+import { Component } from "react";
 import { Image, withCancel } from "react-invenio-forms";
 import { Dropdown, Grid, Header } from "semantic-ui-react";
 import _debounce from "lodash/debounce";

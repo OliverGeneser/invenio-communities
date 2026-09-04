@@ -3,7 +3,6 @@
  * SPDX-License-Identifier: MIT
  */
 
-import React from "react";
 import PropTypes from "prop-types";
 import { Label, Icon } from "semantic-ui-react";
 

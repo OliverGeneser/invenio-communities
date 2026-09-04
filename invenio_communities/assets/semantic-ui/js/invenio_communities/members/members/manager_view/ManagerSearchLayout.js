@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: MIT
  */
 
-import React, { Component } from "react";
+import { Component } from "react";
 import PropTypes from "prop-types";
 import { SearchAppResultsPane } from "@js/invenio_search_ui/components";
 import { Filters } from "../../Filters";

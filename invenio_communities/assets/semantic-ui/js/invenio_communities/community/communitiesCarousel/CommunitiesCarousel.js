@@ -6,7 +6,7 @@
 import { i18next } from "@translations/invenio_communities/i18next";
 import _isEmpty from "lodash/isEmpty";
 import PropTypes from "prop-types";
-import React, { Component } from "react";
+import { Component } from "react";
 import { http, withCancel } from "react-invenio-forms";
 import Overridable from "react-overridable";
 import {

@@ -19,7 +19,7 @@ import _mapValues from "lodash/mapValues";
 import _pick from "lodash/pick";
 import _pickBy from "lodash/pickBy";
 import _unset from "lodash/unset";
-import React, { Component } from "react";
+import { Component } from "react";
 import { FundingField } from "@js/invenio_vocabularies";
 import {
   AccordionField,

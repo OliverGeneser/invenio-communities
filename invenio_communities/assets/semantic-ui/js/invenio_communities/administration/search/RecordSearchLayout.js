@@ -6,7 +6,7 @@
 import { SearchAppResultsPane } from "@js/invenio_search_ui/components";
 import { SearchFacets } from "@js/invenio_administration";
 import PropTypes from "prop-types";
-import React, { Component } from "react";
+import { Component } from "react";
 import { DeletionStatusFilter } from "./filters";
 import { SearchBar, Sort } from "react-searchkit";
 import { Grid } from "semantic-ui-react";

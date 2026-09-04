@@ -4,12 +4,17 @@
  */
 
 import { FeatureModal } from "./FeatureModal";
-import React from "react";
+import { FeatureDateButton } from "./FeatureDateButton";
 import { createRoot } from "react-dom/client";
 import _get from "lodash/get";
 import { OverridableContext, parametrize } from "react-overridable";
 import { FeaturedEntries } from "./featured";
-import { AdminDetailsView, Edit, Delete } from "@js/invenio_administration";
+import {
+  ActionForm,
+  AdminDetailsView,
+  Edit,
+  Delete,
+} from "@js/invenio_administration";
 import { i18next } from "@translations/invenio_communities/i18next";
 
 const domContainer = document.getElementById("invenio-details-config");
@@ -43,6 +48,11 @@ const overridenComponents = {
     ),
   }),
   "InvenioAdministration.ActionModal.layout": FeatureModal,
+  "InvenioAdministration.ActionForm": parametrize(ActionForm, {
+    renderFormActions: ({ setFieldValue }) => (
+      <FeatureDateButton setFieldValue={setFieldValue} />
+    ),
+  }),
 };
 
 domContainer &&

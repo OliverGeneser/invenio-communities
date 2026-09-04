@@ -5,7 +5,7 @@
 
 import { i18next } from "@translations/invenio_communities/i18next";
 import PropTypes from "prop-types";
-import React, { Component } from "react";
+import { Component } from "react";
 import { Checkbox } from "semantic-ui-react";
 import { errorSerializer } from "../../api/serializers";
 import { ErrorPopup } from "./ErrorPopup";

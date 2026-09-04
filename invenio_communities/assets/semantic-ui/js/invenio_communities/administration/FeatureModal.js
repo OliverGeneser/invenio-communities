@@ -5,7 +5,7 @@
 import { InvenioAdministrationCommunitiesApi } from "./api";
 import { DateTime } from "luxon";
 
-import React, { Component } from "react";
+import { Component } from "react";
 import PropTypes from "prop-types";
 import { withCancel } from "react-invenio-forms";
 import { Header, Table, Loader, Modal } from "semantic-ui-react";

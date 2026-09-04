@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: MIT
  */
 
-import React, { Component } from "react";
+import { Component } from "react";
 import PropTypes from "prop-types";
 import { Button, Header, Icon, Segment, Grid } from "semantic-ui-react";
 import { withState } from "react-searchkit";

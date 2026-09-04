@@ -6,7 +6,7 @@
 import { i18next } from "@translations/invenio_communities/i18next";
 import _isEmpty from "lodash/isEmpty";
 import PropTypes from "prop-types";
-import React, { Component } from "react";
+import { Component } from "react";
 import { Image } from "react-invenio-forms";
 import { Button, Header, Icon, Label, Segment } from "semantic-ui-react";
 

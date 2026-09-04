@@ -9,7 +9,7 @@ import { CommunitySettingsForm } from "..//components/CommunitySettingsForm";
 import _get from "lodash/get";
 import _isEmpty from "lodash/isEmpty";
 import { useField } from "formik";
-import React, { Component } from "react";
+import { Component, Fragment } from "react";
 import { RadioField } from "react-invenio-forms";
 import { Header } from "semantic-ui-react";
 import PropTypes from "prop-types";
@@ -32,7 +32,7 @@ const VisibilityField = ({ label = "", formConfig, ...props }) => {
   return (
     <>
       {formConfig.access.visibility.map((item) => (
-        <React.Fragment key={item.value}>
+        <Fragment key={item.value}>
           <RadioField
             key={item.value}
             fieldPath={fieldPath}
@@ -43,7 +43,7 @@ const VisibilityField = ({ label = "", formConfig, ...props }) => {
             onChange={createHandleChange(item.value)}
           />
           <label className="helptext">{item.helpText}</label>
-        </React.Fragment>
+        </Fragment>
       ))}
     </>
   );
@@ -59,7 +59,7 @@ const MembersVisibilityField = ({ label = "", formConfig, ...props }) => {
   return (
     <>
       {formConfig.access.members_visibility.map((item) => (
-        <React.Fragment key={item.value}>
+        <Fragment key={item.value}>
           <RadioField
             key={item.value}
             fieldPath="access.members_visibility"
@@ -69,7 +69,7 @@ const MembersVisibilityField = ({ label = "", formConfig, ...props }) => {
             value={item.value}
           />
           <label className="helptext">{item.helpText}</label>
-        </React.Fragment>
+        </Fragment>
       ))}
     </>
   );
@@ -87,7 +87,7 @@ const MemberPolicyField = ({ label = "", formConfig, ...props }) => {
   return (
     <>
       {formConfig.access.member_policy.map((item) => (
-        <React.Fragment key={item.value}>
+        <Fragment key={item.value}>
           <RadioField
             key={item.value}
             fieldPath="access.member_policy"
@@ -98,7 +98,7 @@ const MemberPolicyField = ({ label = "", formConfig, ...props }) => {
             disabled={isDisabled}
           />
           <label className="helptext">{item.helpText}</label>
-        </React.Fragment>
+        </Fragment>
       ))}
     </>
   );

@@ -7,7 +7,7 @@
 import { i18next } from "@translations/invenio_communities/i18next";
 import { InvenioCommunitiesRoutesGenerator } from "../../../routes/appUrls";
 import PropTypes from "prop-types";
-import React, { Component } from "react";
+import { Component } from "react";
 import { withState } from "react-searchkit";
 import { Button, Container, Modal, Tab } from "semantic-ui-react";
 import { InvitationsContext } from "../../../api/invitations/InvitationsContextProvider";

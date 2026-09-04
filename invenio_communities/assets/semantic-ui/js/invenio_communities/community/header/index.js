@@ -5,7 +5,6 @@ import { createRoot } from "react-dom/client";
  */
 
 import OrganizationsList from "../../organizations/OrganizationsList";
-import React from "react";
 
 import { RequestMembershipButton } from "./RequestMembershipButton";
 

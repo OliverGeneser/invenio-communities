@@ -6,7 +6,7 @@
 import { i18next } from "@translations/invenio_communities/i18next";
 import _truncate from "lodash/truncate";
 import PropTypes from "prop-types";
-import React, { Component } from "react";
+import { Component } from "react";
 import { Image, InvenioPopup } from "react-invenio-forms";
 import Overridable from "react-overridable";
 import { Button, Grid, Header, Item, Icon } from "semantic-ui-react";

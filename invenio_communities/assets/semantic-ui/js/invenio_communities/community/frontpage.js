@@ -5,7 +5,6 @@ import { createRoot } from "react-dom/client";
  * SPDX-License-Identifier: MIT
  */
 
-import React from "react";
 import { i18next } from "@translations/invenio_communities/i18next";
 
 import CommunitiesCardGroup from "./CommunitiesCardGroup";

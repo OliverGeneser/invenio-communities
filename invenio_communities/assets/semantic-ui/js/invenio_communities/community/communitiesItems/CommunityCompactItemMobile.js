@@ -6,7 +6,6 @@
 import { i18next } from "@translations/invenio_communities/i18next";
 import { RestrictedLabel } from "../labels";
 import _truncate from "lodash/truncate";
-import React from "react";
 import { Image, InvenioPopup } from "react-invenio-forms";
 import { Icon, Label, Popup } from "semantic-ui-react";
 import PropTypes from "prop-types";

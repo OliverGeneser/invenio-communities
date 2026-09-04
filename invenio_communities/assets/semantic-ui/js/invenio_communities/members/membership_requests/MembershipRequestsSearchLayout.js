@@ -7,7 +7,7 @@ import { RequestStatusFilter } from "@js/invenio_requests/search";
 import { SearchAppResultsPane } from "@js/invenio_search_ui/components";
 import { SearchFilters } from "@js/invenio_search_ui/components/SearchFilters";
 import PropTypes from "prop-types";
-import React, { Component } from "react";
+import { Component } from "react";
 import { SearchBar, Sort } from "react-searchkit";
 
 import { Filters } from "../Filters";

@@ -4,7 +4,7 @@
  */
 
 import PropTypes from "prop-types";
-import React, { Component } from "react";
+import { Component } from "react";
 import { Icon } from "semantic-ui-react";
 
 export class SuccessIcon extends Component {

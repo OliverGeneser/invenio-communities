@@ -5,7 +5,7 @@
  */
 
 import _truncate from "lodash/truncate";
-import React, { Component } from "react";
+import { Component } from "react";
 import { Image, withCancel } from "react-invenio-forms";
 import { Card, Grid, Message, Placeholder } from "semantic-ui-react";
 import { http } from "react-invenio-forms";

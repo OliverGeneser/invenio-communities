@@ -5,7 +5,6 @@ import { createRoot } from "react-dom/client";
  * SPDX-License-Identifier: MIT
  */
 
-import React from "react";
 import { default as CommunityProfileForm } from "./CommunityProfileForm";
 import { OverridableContext, overrideStore } from "react-overridable";
 
